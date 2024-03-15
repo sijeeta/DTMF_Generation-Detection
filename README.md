@@ -22,6 +22,7 @@ Parameters:
 
 The formula used is:
 [x[n] = A cos(2*pi fr \fs) + A cos(2*pi fc \fs)]
+\[x[n] = A \cos(2\pi f_R \frac{n}{f_s}) + A \cos(2\pi f_C \frac{n}{f_s})\]
 
 First we will learn generation of DTMF Signal using below two method:
 - `Direct method`
