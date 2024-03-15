@@ -31,4 +31,23 @@ $$
 
 First we will learn generation of DTMF Signal using below two method:
 - `Direct method`
-- `Summing the output of Digital Resonator`
+- `Summing the output of Digital Resonator` :
+  #### Digital Resonator for DTMF Signal Generation
+
+The transfer function of a digital resonator is given by:
+
+$$
+H(z) = \frac{1 - \cos(\omega_0)z^{-1}}{1 - 2\cos(\omega_0)z^{-1} + z^{-2}}
+$$
+
+Where $\omega_0$ is the digital frequency of interest. The impulse response of this digital resonator is:
+
+$$
+h[n] = \cos(\omega_0)u[n]
+$$
+
+By feeding the digital resonator an impulse input signal ($x[n] = \delta[n]$), we can generate a sinusoidal function of a digital frequency $\omega_0$. This can be achieved using MATLAB's `filter` function by formulating the difference equation derived from the transfer function and applying an impulse signal as input.
+
+The digital frequencies for the DTMF signals are defined as $\omega_{01} = 2\pi\frac{f_R}{f_s}$ and $\omega_{02} = 2\pi\frac{f_C}{f_s}$, where $f_R$ and $f_C$ are the row and column frequencies, respectively, and $f_s$ is the sampling frequency.
+
+
