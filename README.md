@@ -4,8 +4,12 @@
 
 ### Frequencies Table:
 
-- Low Frequencies: 697 Hz, 770 Hz, 852 Hz, 941 Hz
-- High Frequencies: 1209 Hz, 1336 Hz, 1477 Hz
+|        | 1209 Hz | 1336 Hz | 1477 Hz |
+|--------|---------|---------|---------|
+| 697 Hz |    1    |    2    |    3    |
+| 770 Hz |    4    |    5    |    6    |
+| 852 Hz |    7    |    8    |    9    |
+| 941 Hz |    *    |    0    |    #    |
 
 Each digit or symbol is associated with a combination of one low and one high frequency, ensuring easy detection and minimal interference.
 
@@ -21,7 +25,9 @@ Parameters:
 - `fs` = Sampling frequency (8000 Hz for this project)
 
 The formula used is:
-[x[n] = A cos(2*pi fr\fs) + A cos(2*pi fc \fs)]
+$$
+x[n] = A \cdot \cos(2\pi f_R \cdot \frac{n}{f_s}) + A \cdot \cos(2\pi f_C \cdot \frac{n}{f_s})
+$$
 
 First we will learn generation of DTMF Signal using below two method:
 - `Direct method`
