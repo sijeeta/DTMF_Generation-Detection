@@ -24,7 +24,8 @@ Parameters:
 - `fc` = Column frequency
 - `fs` = Sampling frequency (8000 Hz for this project)
 
-The formula used is:
+The formula to generate a DTMF signal is:
+
 $$
 x[n] = A \cdot \cos(2\pi f_R \cdot \frac{n}{f_s}) + A \cdot \cos(2\pi f_C \cdot \frac{n}{f_s})
 $$
